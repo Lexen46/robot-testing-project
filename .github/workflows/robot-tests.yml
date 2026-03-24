@@ -1,0 +1,27 @@
+name: Robot Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install robotframework robotframework-seleniumlibrary selenium
+
+      - name: Run Robot tests
+        run: robot --variable URL:https://lexen46.github.io/robot-testing-project/swag_labs.html tests/
