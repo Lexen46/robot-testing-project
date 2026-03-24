@@ -8,7 +8,7 @@ ${BROWSER}  Chrome
 
 
 *** Test Cases ***
-Purchase Test
+Purchaseflow Test
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
 
