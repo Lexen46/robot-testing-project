@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${URL}      file:///C:/Users/AuerbachL/OneDrive%20-%20Markant%20Services%20International%20GmbH/Dokumente/robot_package/swag_labs.html
+${URL}      URL:https://lexen46.github.io/robot-testing-project/swag_labs.html
 ${BROWSER}  Chrome
 
 

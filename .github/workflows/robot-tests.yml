@@ -24,4 +24,4 @@ jobs:
           pip install robotframework robotframework-seleniumlibrary selenium
 
       - name: Run Robot tests
-        run: robot --variable URL:https://lexen46.github.io/robot-testing-project/swag_labs.html OPTIONS:headless=true;disable-gpu=true;no-sandbox tests/
+        run: robot tests/
