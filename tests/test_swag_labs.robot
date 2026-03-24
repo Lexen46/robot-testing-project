@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${URL}      https://lexen46.github.io/robot-testing-project/swag_labs.html
+${URL}    file://${CURDIR}/../docs/swag_labs.html
 ${BROWSER}  Chrome
 
 
