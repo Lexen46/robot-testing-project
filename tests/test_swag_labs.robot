@@ -8,8 +8,12 @@ ${BROWSER}  Chrome
 
 
 *** Test Cases ***
-Purchaseflow Test
-    Open Browser    ${URL}    ${BROWSER}
+Purchase Test
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${chrome_options}    add_argument    --headless
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Open Browser    ${URL}    ${BROWSER}    options=${chrome_options}
     Maximize Browser Window
 
     Input Text      id=username    standard_user
